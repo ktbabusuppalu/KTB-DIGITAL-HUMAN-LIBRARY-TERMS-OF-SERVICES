@@ -14,6 +14,7 @@
                         brand: {
                             50: '#f0f9ff',
                             100: '#e0f2fe',
+                            200: '#bae6fd',
                             500: '#0284c7',
                             600: '#0369a1',
                             700: '#035485',
@@ -29,27 +30,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
+        @media print {
+            aside, header, footer, .no-print { display: none !important; }
+            main { display: block !important; max-width: 100% !important; padding: 0 !important; }
+            article { border: none !important; shadow: none !important; padding: 0 !important; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
 
     <!-- Header / Branding Banner -->
     <header class="bg-gradient-to-r from-slate-900 via-brand-900 to-slate-900 text-white shadow-lg sticky top-0 z-50 border-b border-brand-500/30">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center space-x-3">
                 <div class="bg-gradient-to-tr from-brand-500 to-teal-400 p-2.5 rounded-xl shadow-md">
-                    <i class="fa-solid me-0 fa-file-contract text-2xl text-white"></i>
+                    <i class="fa-solid fa-file-contract text-2xl text-white"></i>
                 </div>
                 <div>
                     <h1 class="text-xl font-bold tracking-tight">KDHL On-Line International</h1>
                     <p class="text-xs text-brand-100 font-medium">KTB DIGITAL SERVICE • Bengaluru, India</p>
                 </div>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 no-print">
                 <button onclick="window.print()" class="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg transition-colors border border-slate-700 flex items-center gap-2">
                     <i class="fa-solid fa-print"></i> Print / Save PDF
                 </button>
-                <a href="https://ktbabusuppalu.github.io/Web-application-and-scheduling-platform-for-KDHL-On-Line-1-on-1-digital-product/" target="_blank" class="px-4 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold rounded-lg transition-all shadow-md flex items-center gap-2">
+                <a href="https://ktbabusuppalu.github.io/Web-application-and-scheduling-platform-for-KDHL-On-Line-1-on-1-digital-product/" target="_blank" rel="noopener noreferrer" class="px-4 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold rounded-lg transition-all shadow-md flex items-center gap-2">
                     <i class="fa-solid fa-calendar-check"></i> Platform
                 </a>
             </div>
@@ -57,13 +63,13 @@
     </header>
 
     <!-- Main Container -->
-    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex-grow grid grid-cols-1 lg:grid-cols-4 gap-8">
 
         <!-- Sidebar Navigation -->
-        <aside class="lg:col-span-1">
+        <aside class="lg:col-span-1 no-print">
             <div class="sticky top-24 bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
                 <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Navigation</h3>
-                <nav class="space-y-1.5 text-sm font-medium">
+                <nav class="space-y-1 text-xs font-medium">
                     <a href="#acceptance" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-brand-600 transition-colors">1. Acceptance of Terms</a>
                     <a href="#eligibility" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-brand-600 transition-colors">2. Scope & Eligibility</a>
                     <a href="#payment" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-brand-600 transition-colors">3. Booking & Payments</a>
@@ -73,22 +79,24 @@
                     <a href="#disclaimers" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-brand-600 transition-colors">7. Disclaimers & Liability</a>
                     <a href="#governing" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-brand-600 transition-colors">8. Governing Law</a>
                     <a href="#contact" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-brand-600 transition-colors">9. Merchant Contact</a>
+                    <a href="#summary" class="block px-3 py-2 rounded-lg text-brand-700 bg-brand-50 font-semibold hover:bg-brand-100 transition-colors">10. Summary of Terms</a>
                 </nav>
 
                 <div class="pt-4 border-t border-slate-100">
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs text-slate-600 space-y-1">
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs text-slate-600 space-y-1.5">
                         <p class="font-bold text-slate-800"><i class="fa-solid fa-building me-1 text-brand-600"></i> Merchant Address</p>
                         <p>Building #102, Ramakrishnappa Building, Sector 1, HSR Layout, Bengaluru 560102, India</p>
-                        <p class="pt-1 font-bold text-slate-800"><i class="fa-solid fa-phone me-1 text-brand-600"></i> Phone</p>
-                        <p>+91 91104 36220</p>
+                        <p class="pt-1 font-bold text-slate-800"><i class="fa-solid fa-phone me-1 text-brand-600"></i> Verification Line</p>
+                        <p>+91 98800 00000 / +91 91104 36220</p>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <!-- Terms Content -->
+        <!-- Terms Content Article -->
         <article class="lg:col-span-3 space-y-8 bg-white p-6 sm:p-10 rounded-2xl shadow-sm border border-slate-200/80">
             
+            <!-- Header Section -->
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 mb-3">
                     <i class="fa-solid fa-circle-info"></i> Last Updated: October 2026
@@ -101,11 +109,239 @@
 
             <hr class="border-slate-100">
 
-            <!-- Section 1 -->
+            <!-- Section 1: Acceptance of Terms -->
             <section id="acceptance" class="scroll-mt-24 space-y-3">
                 <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
                     <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">1</span>
-                    Acceptance of Terms
+                    Acceptance of Terms of Service
                 </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    By accessing our web application, processing a transaction via Stripe, or booking a
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-slate-800">Service Bookings & Payments:</strong> All consultations, expert advisory sessions, and digital services are booked and processed internationally or domestically via integrated <strong>Stripe / Razorpay</strong> payment links and interactive calendar slot reservations.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Acceptance Conditions:</strong> By booking a session, making a payment, or utilizing the scheduling platform, users explicitly indicate their full agreement to and acceptance of these terms. Users acknowledge and agree to non-refundable policy conditions due to reserved consultant time, 12-hour advance rescheduling limits via email, and compliance details managed directly by <strong>KTB Digital Service</strong>, based in HSR Layout, Bengaluru, Karnataka, India.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 2: Scope & Eligibility -->
+            <section id="eligibility" class="scroll-mt-24 space-y-3">
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">2</span>
+                    Scope & Eligibility
+                </h3>
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-slate-800">Scope of Services:</strong> KTB Digital Services provides professional online consultations, digital product engineering, technical architecture advisory, health and cellular nutrition models, regional arts, music, cooking, singing, games, dancing, and specialized domain consultations approved and hosted on the platform. All sessions are conducted online via digital video conferencing systems (such as automated Google Meet links or platform-provided video meeting coordinates generated upon booking confirmation).
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">User Eligibility:</strong> Users engaging with the platform, reserving calendar slots, and executing payments (via Stripe or Razorpay using credit/debit cards, UPI, BHIM, Apple Pay, or Google Pay) confirm that they have the legal capacity to enter into a binding agreement. Participants must provide valid contact details (including a functioning registered email address) to receive session credentials, access links, and verification details.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 3: Booking & Payments -->
+            <section id="payment" class="scroll-mt-24 space-y-3">
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">3</span>
+                    Booking & Payments
+                </h3>
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-slate-800">Booking Workflow & Slot Allocation:</strong> Upon successful completion of payment processing, the scheduling system automatically redirects the user to the interactive calendar grid to select proposed or available time slots. Once a slot is selected, meeting coordinates and a unique Google Meet (or alternate digital access link) are generated on-screen and immediately dispatched to the user's registered email address.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Payment Gateways & Currency Support:</strong> All transactions are securely processed through industry-standard checkout integrations including <strong>Razorpay and Stripe Payment Links</strong>. Supported payment methods include major UPI options, BHIM, credit cards, debit cards, Apple Pay, Google Pay, and international card networks. Transactions are accepted in INR, USD, or applicable regional currencies based on user payment provider settings.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Merchant & Tax Compliance:</strong> All transactions will appear on account statements billed under the registered sole proprietorship enterprise name: <strong>KTB DIGITAL SERVICE</strong> (Bengaluru, Karnataka, India).
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 4: Refund & Cancellation -->
+            <section id="refund-cancellation" class="scroll-mt-24 space-y-4 bg-amber-50/60 p-5 rounded-xl border border-amber-200/80">
+                <h3 class="text-xl font-bold text-amber-900 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-amber-500 text-white text-xs font-black">4</span>
+                    Refund & Cancellation Policy
+                </h3>
+                <div class="text-slate-700 text-sm leading-relaxed space-y-3">
+                    <div>
+                        <h4 class="font-bold text-amber-950 flex items-center gap-2">
+                            <i class="fa-solid fa-ban text-amber-600"></i> Non-Refundable Policy
+                        </h4>
+                        <p class="mt-1">
+                            <strong>Reserved Resources:</strong> Because consultations reserve dedicated specialist time, individual calendar slots, and technical preparation, payments are strictly non-refundable once booked, <em>unless a written cancellation notice is emailed at least 48 hours prior to the scheduled session</em>.
+                        </p>
+                        <p class="mt-1">
+                            <strong>Session Finality:</strong> No refunds are issued for missed sessions, change of mind, or failure to join the meeting room at the scheduled time.
+                        </p>
+                    </div>
+
+                    <div class="pt-2">
+                        <h4 class="font-bold text-amber-950 flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-amber-600"></i> Rescheduling Terms
+                        </h4>
+                        <p class="mt-1">
+                            <strong>Notice Period:</strong> Requests to reschedule a session must be submitted via email to <a href="mailto:ktbdigitalservices@gmail.com" class="text-brand-600 font-semibold hover:underline">ktbdigitalservices@gmail.com</a> at least <strong>12 hours</strong> prior to the booked time slot.
+                        </p>
+                        <p class="mt-1">
+                            <strong>Availability:</strong> Approved reschedules are subject to open calendar slots.
+                        </p>
+                    </div>
+
+                    <div class="pt-2">
+                        <h4 class="font-bold text-amber-950 flex items-center gap-2">
+                            <i class="fa-solid fa-shield-cat text-amber-600"></i> Technical Issue Exceptions
+                        </h4>
+                        <p class="mt-1">
+                            <strong>Platform/Host Interruptions:</strong> In the rare event that a session cannot take place or is severely interrupted due to verified technical failure on the host or platform side, a replacement session slot will be provided immediately at no additional cost.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 5: Acceptable Conduct -->
+            <section id="conduct" class="scroll-mt-24 space-y-3">
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">5</span>
+                    Acceptable Conduct
+                </h3>
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-slate-800">Professional & Respectful Interaction:</strong> Participants are required to maintain a professional, courteous, and respectful demeanor during all 1-on-1 digital consultation sessions, email communications, and support desk interactions. Any form of harassment, abusive language, hate speech, or disruptive behavior toward consultants or support personnel will result in the immediate termination of the session without entitlement to a refund.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Authorized Use of Platform & Sessions:</strong> Sessions, meeting links, and digital resources are intended exclusively for the registered participant and the designated consultation scope. Unauthorized commercial exploitation, recording without mutual consent, disruptive technical interference, or attempts to compromise platform security, calendar interfaces, or meeting links are strictly prohibited.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 6: Intellectual Property -->
+            <section id="intellectual" class="scroll-mt-24 space-y-3">
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">6</span>
+                    Intellectual Property
+                </h3>
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-slate-800">Ownership of Content & Materials:</strong> All digital products, e-books, software utilities, audio guides, stotram adaptations, scientific frameworks, website designs, source code, text, graphics, and proprietary methodologies provided through KTB Digital Services and the KTB Digital Human Library remain the exclusive intellectual property of <strong>KTB DIGITAL SERVICES</strong>, Bengaluru, India.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Scope of Permitted Use:</strong> Session participation and product purchases grant the user a limited, non-exclusive, non-transferable, personal license to view and apply materials strictly for personal or internal business educational purposes.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Prohibited Actions:</strong> Users are strictly prohibited from copying, reproducing, redistributing, modifying, publishing, reselling, or creating derivative works from any proprietary materials, software scripts, or documentation without prior express written permission from KTB Digital Services.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 7: Disclaimers & Liability -->
+            <section id="disclaimers" class="scroll-mt-24 space-y-3">
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">7</span>
+                    Disclaimers & Limitation of Liability
+                </h3>
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-slate-800">Informational & Educational Nature:</strong> All technical architecture guidance, software engineering advisory, scientific frameworks, health and cellular nutrition models, and lifestyle discussions provided during consultations or in platform literature are offered for educational and informational purposes only. Consultation insights do not constitute formal medical, legal, or licensed financial guarantees; users assume full responsibility for evaluating and applying information.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Limitation of Liability:</strong> To the maximum extent permitted by applicable law, KTB DIGITAL SERVICE shall not be liable for any indirect, incidental, consequential, special, or punitive damages arising from the use of, or inability to use, the platform, session links, or digital assets. The total cumulative liability of the provider for any direct claim shall not exceed the actual total amount paid by the user for the specific session or digital service in dispute.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 8: Governing Law -->
+            <section id="governing" class="scroll-mt-24 space-y-3">
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">8</span>
+                    Governing Law & Jurisdiction
+                </h3>
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-slate-800">Applicable Jurisdiction:</strong> These Terms of Service, along with all transactions, session bookings, and service agreements, are governed by and construed in accordance with the laws of <strong>India</strong>.
+                    </p>
+                    <p>
+                        <strong class="text-slate-800">Jurisdictional Venue:</strong> Any legal proceedings, disputes, or claims arising out of or relating to KTB Digital Services or the KDHL On-Line International platform shall be subject to the exclusive jurisdiction of the competent courts located in <strong>Bengaluru, Karnataka, India</strong>.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 9: Merchant Contact -->
+            <section id="contact" class="scroll-mt-24 space-y-4">
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-100 text-brand-700 text-xs font-black">9</span>
+                    Merchant Contact Information
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
+                        <p class="text-xs uppercase font-bold text-brand-700 tracking-wider">Enterprise Identity</p>
+                        <p class="font-bold text-slate-800 text-base">KTB DIGITAL SERVICE</p>
+                        <p class="text-xs text-slate-500">Sole Proprietorship registered in Karnataka, India</p>
+                        <p class="text-xs text-slate-600 pt-1"><i class="fa-solid fa-globe text-brand-600 me-1"></i> Platform: KDHL On-Line International</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
+                        <p class="text-xs uppercase font-bold text-brand-700 tracking-wider">Support Channels</p>
+                        <p class="text-slate-700"><i class="fa-envelope text-brand-600 fa-solid w-5"></i> <a href="mailto:ktbdigitalservices@gmail.com" class="hover:underline font-medium">ktbdigitalservices@gmail.com</a></p>
+                        <p class="text-slate-700"><i class="fa-phone text-brand-600 fa-solid w-5"></i> +91 98800 00000 / +91 91104 36220</p>
+                        <p class="text-slate-700 text-xs"><i class="fa-clock text-brand-600 fa-solid w-5"></i> Mon – Sat: 09:00 AM – 06:00 PM IST (UTC +05:30)</p>
+                    </div>
+
+                    <div class="md:col-span-2 bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+                        <p class="text-xs uppercase font-bold text-brand-700 tracking-wider mb-1">Registered Office Address</p>
+                        <p class="text-slate-700 font-medium">
+                            Building #102, Ramakrishnappa Building, Sector 1, HSR Layout, Bengaluru – 560102, Karnataka, INDIA
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Section 10: Summary of Terms of Service -->
+            <section id="summary" class="scroll-mt-24 space-y-3 bg-brand-50/70 p-6 rounded-2xl border border-brand-200">
+                <h3 class="text-xl font-bold text-brand-900 flex items-center gap-2">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-600 text-white text-xs font-black">10</span>
+                    Summary of Terms of Service
+                </h3>
+                <p class="text-slate-700 text-sm leading-relaxed">
+                    By accessing the platform or booking services through <strong>KTB Digital Services (KDHL On-Line International)</strong>, users accept the Terms of Service governing online consultations in technical architecture, digital product engineering, cellular nutrition models, regional arts, music, cooking, singing, games, and dancing. Bookings require legal eligibility and are processed securely via Stripe or Razorpay, after which an automated Google Meet or digital platform link and session coordinates are assigned. Due to reserved consultant time, payments are non-refundable unless written cancellation is received 48 hours prior, though sessions may be rescheduled with at least 12 hours' email notice, or replaced if technical failures occur on the provider's end. Participants must maintain professional conduct during sessions, and all proprietary content, software code, audio guides, stotram adaptations, and scientific frameworks remain the exclusive intellectual property of KTB Digital Services, Bengaluru, India. Consultations are provided for educational and informational purposes with limited provider liability. The terms are governed under the laws of India, with exclusive jurisdiction in Bengaluru, Karnataka, and full merchant contact details (including registered office address, email, and verification phone) are maintained for customer support.
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-xs border-t border-slate-800 no-print mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-4">
+            <p>© 2026 KTB DIGITAL SERVICE. All rights reserved.</p>
+            <p class="flex items-center gap-4">
+                <span>KDHL On-Line International</span>
+                <span>•</span>
+                <span>HSR Layout, Bengaluru, Karnataka, India</span>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
