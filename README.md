@@ -3,10 +3,7 @@
 TERMS OF SERVICES
 All software applications, standalone web utilities, computational frameworks, audio-visual models, scientific research disclosures, and original digital materials authored or presented by KTB Digital Services, remain the exclusive, sole intellectual property of KTB Digital Services.
 
-- 📄 Terms of Services: Read Documentation
-- https://ktbabusuppalu.github.io/KTB-DIGITAL-HUMAN-LIBRARY-TERMS-OF-SERVICES/
-
-- 🏛️ KDHL Online Portal: 1-on-1 Architectural Help
-- https://ktbabusuppalu.github.io/KTB-DIGITAL-HUMAN-LIBRARY-ONLINE-LANDING-PAGE-PORTAL/
+- [📄 Terms of Services: Read Documentation](https://ktbabusuppalu.github.io/KTB-DIGITAL-HUMAN-LIBRARY-TERMS-OF-SERVICES/)
+- [🏛️ KDHL Online Portal: 1-on-1 Architectural Help](https://ktbabusuppalu.github.io/KTB-DIGITAL-HUMAN-LIBRARY-ONLINE-LANDING-PAGE-PORTAL/)
 
 © KTBDIGITAL SERVICES, BENGALURU, INDIA.
